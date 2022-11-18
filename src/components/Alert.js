@@ -6,7 +6,7 @@ const Alert = () => {
     const context = useContext(noteContext)
     const { alert } = context;
     return (
-        <div style={{height: '40px'}}>
+        <div style={{height: '100px'}}>
         {alert && <div className={`alert alert-success alert-dismissible fade show`} role="alert">
             {alert}
         </div>}

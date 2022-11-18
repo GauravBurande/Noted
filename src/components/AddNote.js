@@ -23,14 +23,14 @@ const AddNote = (props) => {
         <div>
             <div className="container my-3">
                 <h2>Add a note</h2>
-                <form>
+                <form >
                     <div className="my-3">
                         <label htmlFor="title" className="form-label">Title</label>
                         <input type="text" ref={focusRef} className="form-control" id="title" value={note.title} name='title' aria-describedby="emailHelp" onChange={onChange} minLength={3} required/>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="description" className="form-label">Description</label>
-                        <input type="text" className="form-control" id="description" value={note.description} name="description" onChange={onChange} minLength={8} required/>
+                        <textarea columns="9" type="text" className="form-control" id="description" value={note.description} name="description" onChange={onChange} minLength={8} required/>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="tag" className="form-label">Tag</label>

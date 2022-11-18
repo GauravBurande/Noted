@@ -9,14 +9,15 @@ const NoteItem = (props) => {
 
     const { note, updateNote } = props;
     return (
-        <div className='my-2 col-md-4'>
+        <div className='my-2 col-md-4 w-50'>
             <div className="card">
-                <div className="card-body">
+                <div className="card-body bg-info">
                     <div className="d-flex justify-content-between">
                         <h5 className="card-title">{note.title}</h5>
                         <span>
-                        <i className="fa-solid fa-trash-can px-2" onClick={()=>{deleteNote(note._id)}}></i>
-                        <i className="fa-sharp fa-solid fa-pen px-2" onClick={()=>{updateNote(note)}}></i>
+                        
+                        <img style={{cursor:'pointer'}} className='px-1' width="30px" src="https://img.icons8.com/ios-filled/512/del-key.png" alt="delete" onClick={()=>{deleteNote(note._id)}} />
+                        <img style={{cursor:'pointer'}} className='px-1' width="30px" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/2x/external-edit-web-flaticons-lineal-color-flat-icons-9.png" alt="edit" onClick={()=>{updateNote(note)}} />
                         </span>
                     </div>
                         <p className="card-text">{note.description}</p>
