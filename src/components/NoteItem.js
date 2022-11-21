@@ -9,7 +9,7 @@ const NoteItem = (props) => {
 
     const { note, updateNote } = props;
     return (
-        <div className='my-2 col-md-4 w-50'>
+        <div className='my-2 col-md-4 w-100'>
             <div className="card">
                 <div className="card-body bg-info">
                     <div className="d-flex justify-content-between">

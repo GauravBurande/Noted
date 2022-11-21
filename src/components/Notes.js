@@ -42,7 +42,7 @@ const Notes = () => {
     return (
         <>
             <div className='d-flex flex-row mt-50 justify-content-between'>
-                <div className="w-50 mr-100 p-50 fixed">
+                <div className="w-50 mr-100 p-50">
                 <AddNote focusRef={focusRef} />
                 </div>
 
@@ -80,7 +80,7 @@ const Notes = () => {
                     </div>
                 </div>
                 <div className="row my-50 w-50 d-flex flex-column">
-                    <h2 style={{height:"80px"}}>Your notes</h2>
+                    <h2 style={{height:"80px", marginTop:"20px"}}>Your notes</h2>
                     {notes.length === 0 && <p><span style={{ color: 'blue', cursor: "pointer" }} onClick={() => { focusRef.current.focus() }}>Add notes</span> to display your notes here.</p>}
                     {notes.map((note) => {
                         return <NoteItem key={note._id} updateNote={updateNote} note={note} />

@@ -30,7 +30,7 @@ const AddNote = (props) => {
                     </div>
                     <div className="mb-3">
                         <label htmlFor="description" className="form-label">Description</label>
-                        <textarea columns="9" type="text" className="form-control" id="description" value={note.description} name="description" onChange={onChange} minLength={8} required/>
+                        <textarea rows="5" type="text" className="form-control" id="description" value={note.description} name="description" onChange={onChange} minLength={8} required/>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="tag" className="form-label">Tag</label>
