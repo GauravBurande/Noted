@@ -27,6 +27,7 @@ const Navbar = () => {
                                 <Link className={`nav-link ${location.pathname==='/about'?'active':''}`} aria-current="page" to="/about">About</Link>
                             </li>
                         </ul>
+                        <p style={{color:"white", marginTop:"8px"}}>Made with &#128151; by <a href="https://twitter.com/gauravvan">@gauravvan</a></p>
                         { localStorage.getItem('token')? <button className="btn btn-primary mx-2" onClick={handleLogOut}>Log Out</button> :<form className='d-flex'>
                             <Link to="/login" className="btn btn-primary mx-2" role="button">Log In</Link>
                             <Link to="/signup" className="btn btn-primary mx-2" role="button">Sign Up</Link>

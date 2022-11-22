@@ -36,42 +36,46 @@ const Signup = () => {
   }
 
   const validatePassword = credentials.cPassword !== credentials.password
+
+  const signInPage = localStorage.getItem('token') ? "You're already logged in, please check your memory!" :
+    <div className="d-flex justify-content-center">
+      <div className="d-flex w-100 mx-auto">
+        <h2 className='w-50'>Create your account</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label htmlFor="name" className="form-label">name</label>
+            <input type="name" className="form-control" value={credentials.name} onChange={onChange} id="name"
+              name='name' minLength={3} required />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label">Email address</label>
+            <input type="email" className="form-control" value={credentials.email} onChange={onChange} id="email" name='email'
+              aria-describedby="emailHelp" required />
+            <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="password" className="form-label">Password</label>
+            <input type="password" className="form-control" value={credentials.password} onChange={onChange} id="password"
+              name='password' minLength={8} required />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="cPassword" className="form-label">Confirm Password</label>
+            <input type="Password" className="form-control" value={credentials.cPassword} onChange={onChange} id="cPassword"
+              name='cPassword' minLength={8} required />
+            <div style={{ height: '30px' }}>
+              {validatePassword && <p className='py-2' style={{ color: 'blue' }}>
+                <i className="fa-sharp fa-solid fa-circle-exclamation"></i> password doesn't match!
+              </p>}
+            </div>
+          </div>
+          <button type="submit" disabled={validatePassword} className="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+
   return (
     <div>
-      <div className="d-flex justify-content-center">
-        <div className="d-flex w-100 mx-auto">
-          <h2 className='w-50'>Create your account</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="mb-3">
-              <label htmlFor="name" className="form-label">name</label>
-              <input type="name" className="form-control" value={credentials.name} onChange={onChange} id="name"
-                name='name' minLength={3} required />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="email" className="form-label">Email address</label>
-              <input type="email" className="form-control" value={credentials.email} onChange={onChange} id="email" name='email'
-                aria-describedby="emailHelp" required />
-              <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div className="mb-3">
-              <label htmlFor="password" className="form-label">Password</label>
-              <input type="password" className="form-control" value={credentials.password} onChange={onChange} id="password"
-                name='password' minLength={8} required />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="cPassword" className="form-label">Confirm Password</label>
-              <input type="Password" className="form-control" value={credentials.cPassword} onChange={onChange} id="cPassword"
-                name='cPassword' minLength={8} required />
-              <div style={{ height: '30px' }}>
-                {validatePassword && <p className='py-2' style={{ color: 'blue' }}>
-                  <i className="fa-sharp fa-solid fa-circle-exclamation"></i> password doesn't match!
-                </p>}
-              </div>
-            </div>
-            <button type="submit" disabled={validatePassword} className="btn btn-primary">Submit</button>
-          </form>
-        </div>
-      </div>
+      {signInPage}
     </div>
   )
 }
