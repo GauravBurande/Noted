@@ -16,7 +16,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     const { name, email, password } = credentials;
     e.preventDefault()
-    const response = await fetch('http://localhost:5500/api/auth/createuser', {
+    const response = await fetch('https://use-noted.herokuapp.com/api/auth/createuser', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

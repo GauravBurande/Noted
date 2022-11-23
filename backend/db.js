@@ -1,12 +1,11 @@
 const mongoose = require('mongoose');
-const mongoURI = "mongodb://127.0.0.1:27017/notro";
+const MONGODB_URI = process.env.MONGODB_URI;
+// const MONGODB_URI = process.env.MONGODB_URI;
 
 const connectToMongo  = ()=>{
-    mongoose.connect(mongoURI, ()=>{
+    mongoose.connect(MONGODB_URI, ()=>{
         console.log('connected to mongo.')
     })
 }
 
 module.exports = connectToMongo;
-
-
