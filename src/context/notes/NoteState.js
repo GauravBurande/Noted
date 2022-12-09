@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import NoteContext from "./NoteContext";
 
 const NoteState = (props) => {
-  const host = 'https://use-noted.herokuapp.com'
+  const host = 'https://noted-backend.onrender.com'
   const notesInitial = []
   const [notes, setNotes] = useState(notesInitial)
   const [alert, setAlert] = useState('')
 
   // set alert
-  const showAlert = (message)=>{
+  const showAlert = (message) => {
     setAlert(message)
     setTimeout(() => {
       setAlert(null)
@@ -83,12 +83,12 @@ const NoteState = (props) => {
 
     // Logic to edit in client
     // for (let index = 0; index < notes.length; index++) {
-      // const element = notes[index];
-      // if (element._id === id) {
-        // element.title = title
-        // element.description = description
-        // element.tag = tag
-      // }
+    // const element = notes[index];
+    // if (element._id === id) {
+    // element.title = title
+    // element.description = description
+    // element.tag = tag
+    // }
     // }
   }
 
