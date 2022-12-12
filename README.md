@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Here's how I built this webapp to understand CRUD operations using MERN stack and bootstrap for css.
 
-### You can visit the webapp here: [use-noted.netlify.app](use-noted.netlify.app/login)
+### You can visit the webapp here: [use-noted.netlify.app](https://use-noted.netlify.app/login)
 
 When I started learning ReactJs, I also learned some concepts of MongoDB and express and I was also building this webapp for my portfolio. 
 First I defined scema for MongoDB, then setup the backend APIs for authentication and CRUD operations.
