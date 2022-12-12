@@ -32,6 +32,6 @@ Replaced the localhost MongoDB URI with remote MongoDB URI as a environment vari
 
 Then still my backend endpoints weren't working. I thought my backend is not connected to the database, checked the MongoDB URI again and again, it was fine. Later I realized my backend is on port 5500, I changed it to 3000 and Viola! I don't know how it happened, it worked.
 
-On Nov 28, 2022 Heroku stopped their generous free dyno services, so I had to migrate my webapp's backend from their.
+On Nov 28, 2022 Heroku stopped their generous free dyno services, so I had to migrate my webapp's backend from there.
 Again I got recommended to use render to host my backend server from a Twitter user.
 so, I connected my github profile with render and deployed the backend to render, changed the API endpoints from the frontend code and again deployed the build to netlify using their CLI.
