@@ -33,6 +33,7 @@ const Signup = () => {
     }
     else {
       alert('Invalid credentials')
+      setBtntext('submit')
     }
   }
 

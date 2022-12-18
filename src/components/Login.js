@@ -32,6 +32,7 @@ const Login = () => {
         }
         else {
             alert('Invalid credentials')
+            setBtntext('submit')
         }
     }
 
