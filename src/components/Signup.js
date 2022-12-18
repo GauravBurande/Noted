@@ -5,6 +5,7 @@ import noteContext from '../context/notes/NoteContext'
 
 const Signup = () => {
   const [credentials, setCredentials] = useState({ name: '', email: '', password: '', cPassword: '' })
+  const [btnText, setBtnText] = useState('Submit')
   let navigate = useNavigate()
 
   const context = useContext(noteContext)
@@ -68,7 +69,7 @@ const Signup = () => {
               </p>}
             </div>
           </div>
-          <button type="submit" disabled={validatePassword} className="btn btn-primary">Submit</button>
+          <button onClick={setBtnText('Plese wait....')} type="submit" disabled={validatePassword} className="btn btn-primary">{btnText}</button>
         </form>
       </div>
     </div>
