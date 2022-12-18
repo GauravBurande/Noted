@@ -7,6 +7,7 @@ const Login = () => {
     const context = useContext(noteContext)
     const { showAlert } = context;
     const [credentials, setCredentials] = useState({ email: '', password: '' })
+    const [btnText, setBtnText] = useState('Submit')
     let navigate = useNavigate()
 
     const onChange = (e) => {
@@ -50,7 +51,7 @@ const Login = () => {
                         <input type="password" className="form-control" value={credentials.password} onChange={onChange}
                             id="password" name='password' />
                     </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button onClick={setBtnText('Please wait....')} type="submit" className="btn btn-primary">{btnText}</button>
                 </form>
             </div>
         </div>
