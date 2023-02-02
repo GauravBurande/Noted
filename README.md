@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### You can visit the webapp here: [https://use-noted.netlify.app/login](https://use-noted.netlify.app/login)
 
+One more thing to add here, the webapp will feel slow whenever there's backend used due to using the free tier of mongodb atlas and render.
+
 When I started learning ReactJs, I also learned some concepts of MongoDB and express and I was also building this webapp for my portfolio. 
 First I defined scema for MongoDB, then setup the backend APIs for authentication and CRUD operations.
 
